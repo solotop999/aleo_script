@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 cd /root
 # Check if the script is run as root
 if [[ $EUID -ne 0 ]]; then
@@ -103,14 +103,12 @@ echo -e "1.Truy cap github setting: https://github.com/settings/profile \n2. Add
 
 read -p "3. An phim Enter de tiep tuc" 
 
+# cd /root/leo/tictactoe/
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_rsa
+# git push -f origin main
+
+# echo "Git push completed successfully."
 
 
-# Check SSH connection to GitHub
-if ssh -T git@github.com; then
-    # SSH connection is successful, run git push
-    git push -f origin main
-    echo "Git push completed successfully."
-else
-    echo "SSH connection to GitHub failed. Please check your SSH configuration."
-    exit 1
-fi
+
